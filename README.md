@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Used technologies
+
+- React
+- Redux
+- Axios
+- Sass (mainly for its nesting capability)
+- Jest, Enzyme (for testing)
+
+Redux and Sass are an absolute overkill for this project but I wanted to treat it as if it was a real-world app, with scalability and extendability in mind.
+
 ## Available Scripts
 
 In the project directory, you can run:
