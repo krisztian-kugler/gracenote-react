@@ -8,7 +8,7 @@
 - Sass (for its nesting capability)
 - Jest, Enzyme (for unit testing)
 
-This is the second time I used React and the first time I tried Redux & Enzyme but I did my best to follow best practices and structured the app accordingly.
+This is the second time I used React and the first time I tried Redux & Enzyme but I did my best to follow best practices and structured the app accordingly. There are no logs, warnings or errors in the console and all unit tests should pass.
 
 ## Instructions
 
