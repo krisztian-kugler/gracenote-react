@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gracenote-react/static/css/main.0e364d53.chunk.css",
+    "main.js": "/gracenote-react/static/js/main.5d19704a.chunk.js",
+    "main.js.map": "/gracenote-react/static/js/main.5d19704a.chunk.js.map",
+    "runtime~main.js": "/gracenote-react/static/js/runtime~main.3cced928.js",
+    "runtime~main.js.map": "/gracenote-react/static/js/runtime~main.3cced928.js.map",
+    "static/js/2.347142e1.chunk.js": "/gracenote-react/static/js/2.347142e1.chunk.js",
+    "static/js/2.347142e1.chunk.js.map": "/gracenote-react/static/js/2.347142e1.chunk.js.map",
+    "index.html": "/gracenote-react/index.html",
+    "precache-manifest.e3b769ab324fb2f77ca0e6fc0d54c903.js": "/gracenote-react/precache-manifest.e3b769ab324fb2f77ca0e6fc0d54c903.js",
+    "service-worker.js": "/gracenote-react/service-worker.js",
+    "static/css/main.0e364d53.chunk.css.map": "/gracenote-react/static/css/main.0e364d53.chunk.css.map"
+  }
+}

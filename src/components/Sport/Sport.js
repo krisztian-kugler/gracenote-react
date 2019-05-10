@@ -1,11 +1,10 @@
 import React from "react";
-import Participant from "../../Participant/Participant";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Participant from "../Participant/Participant";
+import Medal from "../Medal/Medal";
 import "./Sport.sass";
 
 const Sport = ({ sport }) => {
-  console.log(sport);
-  const { Medals, GoldMedalList, SilverMedalList, BronzeMedalList } = sport;
+  const { Sport, Medals, GoldMedalList, SilverMedalList, BronzeMedalList } = sport;
 
   const goldMedalList = GoldMedalList.map((gold, i) => {
     return <Participant medal="gold" participant={gold} key={i} />;
@@ -19,26 +18,17 @@ const Sport = ({ sport }) => {
     return <Participant medal="bronze" participant={bronze} key={i} />;
   });
 
-  const medalsTotal = (medals, medalColor) => {
-    if (medals > 0) {
-      return (
-        <div className="medals">
-          <FontAwesomeIcon className={"medal " + medalColor} icon={["fas", "medal"]} />
-          <p>{medals}</p>
-        </div>
-      );
-    } else {
-      return null;
-    }
+  const renderMedal = (counter, color) => {
+    if (counter > 0) return <Medal counter={counter} color={color} />;
   };
 
   return (
     <section className="Sport">
       <header className="header">
-        <h1>{sport.Sport.c_Name}</h1>
-        {medalsTotal(Medals.n_Gold, "gold")}
-        {medalsTotal(Medals.n_Silver, "silver")}
-        {medalsTotal(Medals.n_Bronze, "bronze")}
+        <h1 className="sport-name">{Sport.c_Name}</h1>
+        {renderMedal(Medals.n_Gold, "gold")}
+        {renderMedal(Medals.n_Silver, "silver")}
+        {renderMedal(Medals.n_Bronze, "bronze")}
       </header>
       <table className="table">
         <thead className="table-header">

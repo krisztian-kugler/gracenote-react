@@ -1,4 +1,4 @@
-@import ../../../sass/init
+@import ../../sass/init
 
 .Sport
   max-width: 720px
@@ -11,33 +11,32 @@
     border-bottom: 1px solid rgb(233, 233, 233)
     background-color: white
 
-    h1
+    .sport-name
       margin-right: 30px
-      color: dodgerblue
+      color: black
       font-size: 24px
       font-weight: 600
       text-transform: uppercase
 
-    .medals
+    .Medal
       display: flex
       align-items: center
       margin-right: 30px
       font-weight: 600
     
-      .medal
+      .icon
         margin-right: 5px
 
-      .gold
-        color: $color-gold
+        &.gold
+          color: $color-gold
 
-      .silver
-        color: $color-silver
+        &.silver
+          color: $color-silver
 
-      .bronze
-        color: $color-bronze
+        &.bronze
+          color: $color-bronze
 
-      p
-        color: rgb(100, 100, 100)
+      .counter
         font-size: 16px
 
   .table
@@ -62,8 +61,8 @@
           font-weight: 600
           text-align: left
 
-        .medal
-          width: 80px
+          &.medal
+            width: 80px
 
-        .participant
-          width: 50%
+          &.participant
+            width: 50%

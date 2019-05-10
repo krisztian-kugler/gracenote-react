@@ -1,13 +1,32 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "../App";
+import { mount } from "enzyme";
+import Root from "../../Root";
+import App from "./App";
+import { NOCMedals } from "../NOCMedals/NOCMedals";
+import { SportList } from "../SportList/SportList";
+
+let wrapper;
+
+beforeEach(() => {
+  wrapper = mount(
+    <Root>
+      <App />
+    </Root>
+  );
+});
+
+afterEach(() => {
+  wrapper.unmount();
+});
+
+it("creates the App component succesfully", () => {
+  expect(wrapper).toBeTruthy();
+});
 
 it("renders the NOCMedals component", () => {
-  const div = document.createElement("div");
+  expect(wrapper.find(NOCMedals).length).toEqual(1);
+});
 
-  ReactDOM.render(<App />, div);
-
-  console.log(div.innerHTML);
-
-  ReactDOM.unmountComponentAtNode(div);
+it("renders the SportList component", () => {
+  expect(wrapper.find(SportList).length).toEqual(1);
 });

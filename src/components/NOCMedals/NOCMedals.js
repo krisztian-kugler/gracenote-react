@@ -1,15 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
+import Medal from "../Medal/Medal";
 import "./NOCMedals.sass";
 
-const NOCMedals = ({ NOCMedals }) => {
+export const NOCMedals = ({ NOCMedals }) => {
   if (!NOCMedals) return null;
 
-  console.log(NOCMedals);
+  const { NOC, Medals } = NOCMedals;
+
+  const renderMedal = (counter, color) => {
+    if (counter > 0) return <Medal counter={counter} color={color} />;
+  };
 
   return (
     <section className="NOCMedals">
-      <h1>{NOCMedals.NOC.c_Name}</h1>
+      <h1 className="country">{NOC.c_Name}</h1>
+      <div className="medals">
+        {renderMedal(Medals.n_Gold, "gold")}
+        {renderMedal(Medals.n_Silver, "silver")}
+        {renderMedal(Medals.n_Bronze, "bronze")}
+      </div>
     </section>
   );
 };

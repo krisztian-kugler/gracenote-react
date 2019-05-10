@@ -1,9 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import Sport from "./Sport/Sport";
-import "./SportList.sass";
+import Sport from "../Sport/Sport";
 
-const SportList = ({ sportList }) => {
+export const SportList = ({ sportList }) => {
   if (!sportList) return null;
 
   const sports = sportList.map(sport => {

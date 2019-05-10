@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import fetchData from "../../actions";
+import fetchData from "../../actions/actions";
 import NOCMedals from "../NOCMedals/NOCMedals";
 import SportList from "../SportList/SportList";
 import "./App.sass";
